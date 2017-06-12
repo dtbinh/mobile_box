@@ -9,12 +9,12 @@ import math, csv
 global boxMarker, goalMarker
 boxMarker = (0,0)
 goalMarker = (-1,-1)
-NAVMAPX = 8
-NAVMAPY = 6
+NAVMAPX = 8.0
+NAVMAPY = 5.75
 PLANMAPX = 20
-PLANMAPY = 17
-OFFSETX = 0.05
-OFFSETY = 0.0
+PLANMAPY = 15
+OFFSETX = 0.55
+OFFSETY = 0.1
 
 topic = 'visualization_marker_array'
 publisher = rospy.Publisher(topic, MarkerArray, queue_size=10)

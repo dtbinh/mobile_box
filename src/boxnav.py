@@ -24,12 +24,12 @@ endBoxes = []
 boxStartSet = False
 boxGoalSet = False
 
-NAVMAPX = 8
-NAVMAPY = 6
+NAVMAPX = 8.0
+NAVMAPY = 5.75
 PLANMAPX = 20
-PLANMAPY = 17
-OFFSETX = 0.05
-OFFSETY = 0.0
+PLANMAPY = 15
+OFFSETX = 0.55
+OFFSETY = -0.1
 
 def updateCurrentPos(pos):
 	global startRovers
@@ -128,9 +128,9 @@ def returnPlan(roverStart, boxStart, boxEnd):
 
 if __name__ == "__main__":	
 	rospy.init_node('boxnav')
-	# startRovers = [Point(7.38,-4.8,0)]
-	# startBoxes = [Point(6.7,-2.5,0)]
-	# endBoxes = [Point(5.5,-2.32, 0)]
+	# startRovers = [Point(5.76,-2.81,0)]
+	# startBoxes = [Point(5.0,-2.8,0)]
+	# endBoxes = [Point(4.5,-2.8, 0)]
 
 	sub1 = rospy.Subscriber('move_base_simple/goal', PoseStamped, updateCurrentPos)
 	sub2 = rospy.Subscriber('clicked_point', PointStamped, updateBoxPos)
